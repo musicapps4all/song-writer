@@ -249,7 +249,7 @@ const shorthandToNoteMap = {
     'F2': 'fa-high', 'S2': 'so-high', 'L2': 'la-high'
 };
 
-const LINE_COLORS = ['#f5f5f5', '#f0f8ff', '#fff0f5', '#f0fff0'];
+const LINE_COLORS = ['#e3f2fd', '#fff8e1', '#fce4ec', '#e8f5e9'];
 
 // ===== ELEMENT REFERENCES =====
 const notationContainer = document.querySelector('.notation-container');
@@ -1113,7 +1113,7 @@ function toggleChords() {
 function toggleColorScheme() {
     colorSchemeActive = !colorSchemeActive;
     colorSchemeToggle.classList.toggle('active', colorSchemeActive);
-    notationContainer.classList.toggle('colors-inactive', !colorSchemeActive);
+    document.body.classList.toggle('colors-inactive', !colorSchemeActive);
     updateLineBackgrounds();
     console.log(`Color scheme colors ${colorSchemeActive ? 'enabled' : 'disabled'}`);
 }
